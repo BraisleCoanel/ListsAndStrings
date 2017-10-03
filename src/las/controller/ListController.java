@@ -34,7 +34,7 @@ public class ListController
 	private void fillTheList()
 	{
 		Kahoot fiftyStates = new Kahoot("Kashish", 50);
-		Kahoot mySecondKahoot = new Kahoot("Ethatn", 2);
+		Kahoot mySecondKahoot = new Kahoot("Ethan", 2);
 		Kahoot animalColor = new Kahoot("Branton", 10);
 		Kahoot bigQuiz = new Kahoot("Derek", Integer.MAX_VALUE);
 		Kahoot presidents = new Kahoot("Obama", 44);
