@@ -22,7 +22,8 @@ public class ListController
 		Kahoot myFirstKahoot = new Kahoot();
 		myKahoots.add(myFirstKahoot);
 		fillTheList();
-		showTheList();
+//		showTheList();
+		changeTheList();
 	}
 	private void showTheList()
 	{
@@ -48,12 +49,19 @@ public class ListController
 			{
 				popup.displayText(currentCreator.substring(currentLetterIndex, currentLetterIndex + 1));
 			}
+			
+			String topic = currentKahoot.getTopic();
+			
+			for (int letter = currentKahoot.getTopic().length() - 1; letter >= 0; letter -= 1)
+			{
+				popup.displayText(topic.substring(letter, letter + 1));
+			}
 		
 		}
 	}
 	private void fillTheList()
 	{
-		Kahoot fiftyStates = new Kahoot("Kashish", 50, "The Fifty Nify United States.");
+		Kahoot fiftyStates = new Kahoot("Kashish", 50, "The Fifty Nifty United States.");
 		Kahoot mySecondKahoot = new Kahoot("Ethan", 2, "Doubles");
 		Kahoot animalColor = new Kahoot("Branton", 10,"All the colors of the animals");
 		Kahoot bigQuiz = new Kahoot("Derek", Integer.MAX_VALUE, "Everything");
@@ -64,5 +72,16 @@ public class ListController
 		myKahoots.add(bigQuiz);
 		myKahoots.add(presidents);
 	}
-
+	private void changeTheList()
+	{
+		popup.displayText("The curent list size : " + myKahoots.size());
+		Kahoot removed = myKahoots.remove(3);
+		popup.displayText("I removed the Kahoot by " + removed.getCreator());
+		popup.displayText("The List now has: " + myKahoots.size() + " items inside.");
+		myKahoots.add(0, removed);
+		
+		popup.displayText("The list is still : " + myKahoots.size() + " items big.");
+		removed = myKahoots.set(2,  new Kahoot());
+		popup.displayText("The Kahoot by " + removed.getCreator() + " was replaced with on by: " + myKahoots.get(2).getCreator());
+	}
 }
