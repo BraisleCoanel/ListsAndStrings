@@ -75,6 +75,8 @@ public class ListController
 		myKahoots.add(reasonsToLive);
 	}
 	private void changeTheList()
+
+
 	{
 		popup.displayText("The curent list size : " + myKahoots.size());
 		Kahoot removed = myKahoots.remove(3);
@@ -85,5 +87,15 @@ public class ListController
 		popup.displayText("The list is still : " + myKahoots.size() + " items big.");
 		removed = myKahoots.set(2,  new Kahoot());
 		popup.displayText("The Kahoot by " + removed.getCreator() + " was replaced with on by: " + myKahoots.get(2).getCreator());
+	}
+	public PopupDisplay getPopup()
+	{
+		
+		return popup;
+	}
+	
+	public ArrayList<Kahoot> getMyKahoots()
+	{
+		return (ArrayList<Kahoot>) myKahoots;
 	}
 }
