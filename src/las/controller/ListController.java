@@ -66,11 +66,13 @@ public class ListController
 		Kahoot animalColor = new Kahoot("Branton", 10,"All the colors of the animals");
 		Kahoot bigQuiz = new Kahoot("Derek", Integer.MAX_VALUE, "Everything");
 		Kahoot presidents = new Kahoot("Obama", 44, "The 44th president of the US");
+		Kahoot reasonsToLive = new Kahoot("Sebastion", 0, "Are there reasons to live?");
 		myKahoots.add(fiftyStates);
 		myKahoots.add(mySecondKahoot);
 		myKahoots.add(animalColor);
 		myKahoots.add(bigQuiz);
 		myKahoots.add(presidents);
+		myKahoots.add(reasonsToLive);
 	}
 	private void changeTheList()
 	{
