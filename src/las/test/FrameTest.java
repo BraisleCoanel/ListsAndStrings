@@ -1,19 +1,19 @@
-//package las.test;
-//
-//import static org.junit.Assert.*;
-//
-//import org.junit.After;
-//import org.junit.Before;
-//import org.junit.Test;
-//
-//import las.controller.ListController;
-//import las.view.ChatFrame;
-//import las.view.ChatPanel;
-//
-//public class FrameTest
-//{
-//	private ChatFrame testedFrame;
-//
+package las.test;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import las.controller.ListController;
+import las.view.ChatFrame;
+import las.view.ChatPanel;
+
+public class FrameTest
+{
+	private ChatFrame testedFrame;
+
 //	@Before
 //	public void setUp() throws Exception
 //	{
@@ -43,4 +43,4 @@
 //		assertTrue("Application size must be at least 500 pixels high", testedFrame.getHeight() >= 500);
 //		assertFalse("The chatbot application should not be resizable", testedFrame.isResizable());
 //	}
-//}
+}

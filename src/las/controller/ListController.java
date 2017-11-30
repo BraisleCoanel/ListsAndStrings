@@ -4,17 +4,20 @@ import java.util.List;
 import java.util.ArrayList;
 import las.model.Kahoot;
 import las.view.PopupDisplay;
+import las.model.Chatbot;
 
 public class ListController
 {
 	private List<Kahoot> myKahoots;
 	private PopupDisplay popup;
+	private Chatbot chatbot;
 	
 	
 	public ListController()
 	{
 		myKahoots = new ArrayList<Kahoot>();
 		popup = new PopupDisplay();
+		chatbot = new Chatbot("Branton Martinson");
 	}
 	
 	public void start()
@@ -22,9 +25,28 @@ public class ListController
 		Kahoot myFirstKahoot = new Kahoot();
 		myKahoots.add(myFirstKahoot);
 		fillTheList();
-//		showTheList();
+		showTheList();
 		changeTheList();
+		
+//		String response = popup.collectResponse("What do you want to talk about?");
+//		
+//		while (chatbot.lengthChecker(response) && !chatbot.quitChecker(response));
+//		{
+//			response = popupChat(response);
+//			response = popup.collectResponse(response);
+//		}
 	}
+	
+	public String popupChat(String chat)
+	{
+		String chatbotSays = "";
+		
+		chatbotSays += chatbot.processConversation(chat);
+		
+		return chatbotSays;
+				
+	}
+	
 	private void showTheList()
 	{
 		String currentCreator = "";
@@ -59,7 +81,9 @@ public class ListController
 		
 		}
 	}
+	
 	private void fillTheList()
+
 	{
 		Kahoot fiftyStates = new Kahoot("Kashish", 50, "The Fifty Nifty United States.");
 		Kahoot mySecondKahoot = new Kahoot("Ethan", 2, "Doubles");
@@ -74,7 +98,9 @@ public class ListController
 		myKahoots.add(presidents);
 		myKahoots.add(reasonsToLive);
 	}
+	
 	private void changeTheList()
+
 
 
 	{
@@ -88,6 +114,7 @@ public class ListController
 		removed = myKahoots.set(2,  new Kahoot());
 		popup.displayText("The Kahoot by " + removed.getCreator() + " was replaced with on by: " + myKahoots.get(2).getCreator());
 	}
+	
 	public PopupDisplay getPopup()
 	{
 		

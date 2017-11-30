@@ -2,56 +2,71 @@ package las.test;
 
 import static org.junit.Assert.*;
 
-import java.util.ArrayList;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
 import las.controller.ListController;
+import las.model.Chatbot;
 import las.view.PopupDisplay;
-import las.model.Kahoot;
+import las.view.ChatFrame;
 
 public class ControllerTest
 {
-	private ListController tested;
-
+	private ListController testedController;
+	
 	@Before
 	public void setUp() throws Exception
 	{
-		tested = new ListController();
+		testedController = new ListController();
 	}
 
 	@After
 	public void tearDown() throws Exception
 	{
-		tested = null;
+		testedController = null;
 	}
 
-	@Test
-	public void testController()
-	{
-		assertNotNull("Popup not initialized.", tested.getPopup());
-		assertNotNull("ArrayList of Kahoot not initialized", tested.getMyKahoots());
-	}
+//	@Test
+////	public void testChatbotController()
+////	{
+////		assertNotNull("Chatbot should be initialized in constructor", testedController.getChatbot());
+////		assertNotNull("PopupDisplay should be initialized in constructor", testedController.getDisplay());
+////	}
+//
+//	@Test
+//	public void testStart()
+//	{
+//		assertTrue("This test should alway pass.", true);
+//	}
+//
+//	@Test
+//	public void testInteractWithChatbot()
+//	{
+//		assertNotNull("Interact method should not return null", testedController.interactWithChatbot(""));
+//		assertNotNull("Interact method should not return null still", testedController.interactWithChatbot(null));
+//		assertTrue("Interact method should always return a String longer than 5", testedController.interactWithChatbot("").length() > 5);
+//		
+//	}
 
-	@Test
-	public void testStart()
-	{
-		tested.start();
-		assertTrue("ArrayList of Kahoot is too short", tested.getMyKahoots().size() > 3);
-	}
-
-	@Test
-	public void testGetPopup()
-	{
-		assertTrue("Popup type is incorrect", tested.getPopup() instanceof PopupDisplay);
-	}
-
-	@Test
-	public void testGetMyKahoots()
-	{
-		assertTrue("ArrayList<Kahoot> expected", tested.getMyKahoots() instanceof ArrayList<?>);
-
-	}
+//	@Test
+//	public void testGetChatbot()
+//	{
+//		assertNotNull("For some reason the chatbot needs to exist.", testedController.getChatbot());
+//		assertTrue("This method should return an instance of Chatbot", testedController.getChatbot() instanceof Chatbot);
+//	}
+//
+//	@Test
+//	public void testGetDisplay()
+//	{
+//		assertNotNull("Popup must be initialized.", testedController.getDisplay());
+//		assertTrue("Popup display type should be used.", testedController.getDisplay() instanceof PopupDisplay);
+//	}
+//	
+//	public void testGetChatFrame()
+//	{
+//		assertNotNull("ChatFrame must be initialized.", testedController.getChatFrame());
+//		assertTrue("Chatframe needs to be returned", testedController.getChatFrame() instanceof ChatFrame);
+//	}
 
 }

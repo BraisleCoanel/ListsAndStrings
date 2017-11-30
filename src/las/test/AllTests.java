@@ -5,7 +5,7 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({ ControllerTest.class, KahootTest.class })
+@SuiteClasses({ ChatbotTest.class, ControllerTest.class, FrameTest.class, MovieTest.class, PanelTest.class })
 public class AllTests
 {
 

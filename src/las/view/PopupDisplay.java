@@ -13,6 +13,10 @@ public class PopupDisplay
 	private ImageIcon icon;
 	private String windowTitle;
 	
+//	public String collectResponse(String)
+//	{
+//		
+//	}
 	public PopupDisplay()
 	{
 		icon = new ImageIcon(getClass().getResource("images/cool_pic.png"));

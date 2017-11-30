@@ -1,25 +1,25 @@
-//package las.test;
-//
-//import static org.junit.Assert.*;
-//
-//import java.awt.Component;
-//import java.awt.event.ActionListener;
-//
-//import javax.swing.JButton;
-//import javax.swing.JTextArea;
-//import javax.swing.SpringLayout;
-//
-//import org.junit.After;
-//import org.junit.Before;
-//import org.junit.Test;
-//
-//import las.controller.ListController;
-//import las.view.ChatPanel;
-//
-//public class PanelTest
-//{
-//	private ChatPanel testedPanel;
-//	
+package las.test;
+
+import static org.junit.Assert.*;
+
+import java.awt.Component;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JTextArea;
+import javax.swing.SpringLayout;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import las.controller.ListController;
+import las.view.ChatPanel;
+
+public class PanelTest
+{
+	private ChatPanel testedPanel;
+	
 //	@Before
 //	public void setUp() throws Exception
 //	{
@@ -61,4 +61,4 @@
 //			}
 //		}
 //	}
-//}
+}
